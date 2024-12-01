@@ -12,6 +12,8 @@ import android.content.Intent;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 public class bmi_bmrActivity extends AppCompatActivity {
 
     @Override
@@ -19,7 +21,7 @@ public class bmi_bmrActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_bmi_bmr);
-
+        TextView textview3 = findViewById(R.id.textView3);
         EditText weightInput = findViewById(R.id.weight);
         EditText heightInput = findViewById(R.id.height);
         EditText ageInput = findViewById(R.id.age);
@@ -62,12 +64,9 @@ public class bmi_bmrActivity extends AppCompatActivity {
 
 
 
-                    bmiResult.setText(String.format("결과: %.2f", bmi));
-                    bmiResult.setVisibility(View.VISIBLE);
-                    bmiStatus.setText(String.format("상태 : %s", status));
-                    bmiStatus.setVisibility(View.VISIBLE);
-                    bmrResult.setText(String.format("기초대사량: %.2f kcal", bmr));
-                    bmrResult.setVisibility(View.VISIBLE);
+                    String result = String.format("BMI: %.2f\n상태: %s\n기초대사량: %.2f kcal", bmi, status, bmr);
+                    textview3.setText(result);
+
 
                 } catch (NumberFormatException e) {
                     Toast.makeText(bmi_bmrActivity.this, "숫자를 올바르게 입력하세요.", Toast.LENGTH_SHORT).show();

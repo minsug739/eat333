@@ -5,83 +5,117 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/image2"
     tools:context=".bmi_bmrActivity">
+
 
     <TextView
         android:id="@+id/bmitext"
-        android:layout_width="411dp"
-        android:layout_height="0dp"
+        android:layout_width="106dp"
+        android:layout_height="38dp"
         android:layout_marginBottom="443dp"
-        android:text="BMI,BMR 확인하기"
-        android:textSize="50sp"
+        android:text=" 아포이터"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.265" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="401dp"
-        android:layout_height="23dp"
-        android:text="식단을 보기전에 BMI,BMR부터!"
+        android:layout_width="225dp"
+        android:layout_height="29dp"
+        android:text="BMI와 기초대사량을 체크하세요!!"
+        android:textColor="#258028"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.116" />
+        app:layout_constraintVertical_bias="0.215" />
 
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="415dp"
-        android:layout_height="255dp"
-        android:orientation="vertical"
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="326dp"
+        android:layout_height="52dp"
+        android:background="@drawable/edittext_rounded_corner_rectangle"
+        android:hint="몸무게 입력(kg)"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintVertical_bias="0.341" />
 
-        <EditText
-            android:id="@+id/weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="몸무게 입력(kg)"
-            android:inputType="numberDecimal" />
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="326dp"
+        android:layout_height="52dp"
+        android:background="@drawable/edittext_rounded_corner_rectangle"
+        android:hint="키를 입력(kg)"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.426" />
 
-        <EditText
-            android:id="@+id/height"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="키를 입력(kg)"
-            android:inputType="numberDecimal" />
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="326dp"
+        android:layout_height="52dp"
+        android:background="@drawable/edittext_rounded_corner_rectangle"
+        android:hint="나이를 입력(세)"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.522" />
 
-        <EditText
-            android:id="@+id/age"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="나이를 입력(세)"
-            android:inputType="numberDecimal" />
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="326dp"
+        android:layout_height="22dp"
+        android:entries="@array/gender_array"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.287" />
 
-        <Spinner
-            android:id="@+id/gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/gender_array" />
+    <Button
+        android:id="@+id/bmi_bmrbtn"
+        android:layout_width="164dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#206580"
+        android:text="bmi,bmr 계산하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
 
-        <Button
-            android:id="@+id/bmi_bmrbtn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#00BCD4"
-            android:text="bmi,bmr 계산하기" />
-
-
-    </LinearLayout>
-
+    <Button
+        android:id="@+id/btn_diet_recommendation"
+        android:layout_width="163dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#1B992E"
+        android:text="식단 입력하러가기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693" />
 
     <TextView
         android:id="@+id/bmiResult"
@@ -129,16 +163,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.839" />
 
-    <Button
-        android:id="@+id/btn_diet_recommendation"
-        android:layout_width="379dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="81dp"
-        android:backgroundTint="#1B992E"
-        android:text="식단 추천받기 "
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="341dp"
+        android:layout_height="154dp"
+        android:hint="bmi와 기초대사량이 생성되고있습니다.."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmitext" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="성별"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="105dp"
+        android:layout_height="69dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04"
+        app:srcCompat="@drawable/image" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="다이어터들을 위한 식단 관리 앱"
+        android:textColor="#80801b"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.166" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
